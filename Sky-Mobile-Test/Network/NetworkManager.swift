@@ -8,34 +8,6 @@
 
 import Foundation
 
-protocol NetworkSessionProtocol {
-    func fetchData(fromUrl url: EndPoints, callback: @escaping (Data?, URLResponse?, Error?) -> Void)
-}
-
-extension URLSession: NetworkSessionProtocol {
-
-    func fetchData(fromUrl url: EndPoints, callback: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        if let url = URL(string: url.rawValue) {
-            let task = self.dataTask(with: url) { (data, response, error) in
-                callback(data, response, error)
-            }
-            task.resume()
-        }
-    }
-}
-
-
-class URLSessionMock: NetworkSessionProtocol {
-    
-    var data: Data?
-    var error: Error?
-    var response: URLResponse?
-    
-    func fetchData(fromUrl url: EndPoints, callback: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        callback(data, response, error)
-    }
-}
-
 class NetworkManager {
     
     private let session: NetworkSessionProtocol
@@ -44,7 +16,9 @@ class NetworkManager {
         self.session = session
     }
     
-    func fetchData(fromEndPoint endPoint: EndPoints, callback: @escaping (Result<Data, NetworkError>) -> Void) {
+    func fetchData<T: Codable>(fromEndPoint endPoint: EndPoints,
+                               andFormat format: T.Type,
+                   callback: @escaping (Result<[T], NetworkError>) -> Void) {
         session.fetchData(fromUrl: endPoint) { (data, response, error) in
             if error != nil {
                 callback(.failure(.somethingWentWrong))
@@ -53,7 +27,10 @@ class NetworkManager {
             if let httpResponse = response as? HTTPURLResponse, let data = data {
                 switch httpResponse.statusCode {
                 case 200...299:
-                    callback(.success(data))
+                    let decoder = JSONDecoder()
+                    if let decodedData = try? decoder.decode([T].self, from: data) {
+                        callback(.success(decodedData))
+                    }
                 default:
                     callback(.failure(.somethingWentWrong))
                 }

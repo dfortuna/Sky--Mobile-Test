@@ -17,10 +17,10 @@ class MoviesListController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        networkmanager.fetchData(fromEndPoint: .home) { (result) in
+        networkmanager.fetchData(fromEndPoint: .home, andFormat: MovieItem.self) { (result) in
             switch result {
             case .success(let result):
-                print(String(data: result, encoding: .utf8))
+                print(result[0].title)
             case .failure(_):
                 print()
             }
