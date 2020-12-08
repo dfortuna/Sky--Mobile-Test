@@ -79,13 +79,9 @@
 		36C4F32A257F018B00C015C6 /* Sky-Mobile-Test */ = {
 			isa = PBXGroup;
 			children = (
-				36C4F32B257F018B00C015C6 /* AppDelegate.swift */,
-				36C4F32D257F018B00C015C6 /* SceneDelegate.swift */,
+				36C4F34D257F01B700C015C6 /* Supporting Files */,
 				36C4F32F257F018B00C015C6 /* ViewController.swift */,
 				36C4F331257F018B00C015C6 /* Main.storyboard */,
-				36C4F334257F018E00C015C6 /* Assets.xcassets */,
-				36C4F336257F018E00C015C6 /* LaunchScreen.storyboard */,
-				36C4F339257F018E00C015C6 /* Info.plist */,
 			);
 			path = "Sky-Mobile-Test";
 			sourceTree = "<group>";
@@ -97,6 +93,18 @@
 				36C4F344257F018E00C015C6 /* Info.plist */,
 			);
 			path = "Sky-Mobile-TestTests";
+			sourceTree = "<group>";
+		};
+		36C4F34D257F01B700C015C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36C4F32B257F018B00C015C6 /* AppDelegate.swift */,
+				36C4F32D257F018B00C015C6 /* SceneDelegate.swift */,
+				36C4F334257F018E00C015C6 /* Assets.xcassets */,
+				36C4F336257F018E00C015C6 /* LaunchScreen.storyboard */,
+				36C4F339257F018E00C015C6 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
