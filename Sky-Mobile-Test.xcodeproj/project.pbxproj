@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		36C4F32C257F018B00C015C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F32B257F018B00C015C6 /* AppDelegate.swift */; };
 		36C4F32E257F018B00C015C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F32D257F018B00C015C6 /* SceneDelegate.swift */; };
-		36C4F330257F018B00C015C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F32F257F018B00C015C6 /* ViewController.swift */; };
+		36C4F330257F018B00C015C6 /* MoviesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F32F257F018B00C015C6 /* MoviesListController.swift */; };
 		36C4F333257F018B00C015C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C4F331257F018B00C015C6 /* Main.storyboard */; };
 		36C4F335257F018E00C015C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C4F334257F018E00C015C6 /* Assets.xcassets */; };
 		36C4F338257F018E00C015C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C4F336257F018E00C015C6 /* LaunchScreen.storyboard */; };
-		36C4F343257F018E00C015C6 /* Sky_Mobile_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F342257F018E00C015C6 /* Sky_Mobile_TestTests.swift */; };
+		36C4F34F257F099700C015C6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F34E257F099700C015C6 /* NetworkManager.swift */; };
+		36C4F351257F09F300C015C6 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F350257F09F300C015C6 /* EndPoints.swift */; };
+		36C4F353257F0AF800C015C6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F352257F0AF800C015C6 /* NetworkError.swift */; };
+		36C4F356257F19AF00C015C6 /* NetworkManager_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F355257F19AF00C015C6 /* NetworkManager_tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +33,18 @@
 		36C4F328257F018B00C015C6 /* Sky-Mobile-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sky-Mobile-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C4F32B257F018B00C015C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36C4F32D257F018B00C015C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		36C4F32F257F018B00C015C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		36C4F32F257F018B00C015C6 /* MoviesListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListController.swift; sourceTree = "<group>"; };
 		36C4F332257F018B00C015C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36C4F334257F018E00C015C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36C4F337257F018E00C015C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36C4F339257F018E00C015C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36C4F33E257F018E00C015C6 /* Sky-Mobile-TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sky-Mobile-TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		36C4F342257F018E00C015C6 /* Sky_Mobile_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sky_Mobile_TestTests.swift; sourceTree = "<group>"; };
 		36C4F344257F018E00C015C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36C4F34E257F099700C015C6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		36C4F350257F09F300C015C6 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		36C4F352257F0AF800C015C6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		36C4F354257F19AE00C015C6 /* Sky-Mobile-TestTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sky-Mobile-TestTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		36C4F355257F19AF00C015C6 /* NetworkManager_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager_tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				36C4F34D257F01B700C015C6 /* Supporting Files */,
-				36C4F32F257F018B00C015C6 /* ViewController.swift */,
-				36C4F331257F018B00C015C6 /* Main.storyboard */,
+				36C4F358257F1CA600C015C6 /* Movies List */,
+				36C4F357257F1C8D00C015C6 /* Network */,
 			);
 			path = "Sky-Mobile-Test";
 			sourceTree = "<group>";
@@ -89,8 +96,9 @@
 		36C4F341257F018E00C015C6 /* Sky-Mobile-TestTests */ = {
 			isa = PBXGroup;
 			children = (
-				36C4F342257F018E00C015C6 /* Sky_Mobile_TestTests.swift */,
 				36C4F344257F018E00C015C6 /* Info.plist */,
+				36C4F355257F19AF00C015C6 /* NetworkManager_tests.swift */,
+				36C4F354257F19AE00C015C6 /* Sky-Mobile-TestTests-Bridging-Header.h */,
 			);
 			path = "Sky-Mobile-TestTests";
 			sourceTree = "<group>";
@@ -105,6 +113,25 @@
 				36C4F339257F018E00C015C6 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		36C4F357257F1C8D00C015C6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				36C4F34E257F099700C015C6 /* NetworkManager.swift */,
+				36C4F350257F09F300C015C6 /* EndPoints.swift */,
+				36C4F352257F0AF800C015C6 /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		36C4F358257F1CA600C015C6 /* Movies List */ = {
+			isa = PBXGroup;
+			children = (
+				36C4F32F257F018B00C015C6 /* MoviesListController.swift */,
+				36C4F331257F018B00C015C6 /* Main.storyboard */,
+			);
+			path = "Movies List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +187,7 @@
 					};
 					36C4F33D257F018E00C015C6 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 						TestTargetID = 36C4F327257F018B00C015C6;
 					};
 				};
@@ -208,7 +236,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36C4F330257F018B00C015C6 /* ViewController.swift in Sources */,
+				36C4F34F257F099700C015C6 /* NetworkManager.swift in Sources */,
+				36C4F351257F09F300C015C6 /* EndPoints.swift in Sources */,
+				36C4F330257F018B00C015C6 /* MoviesListController.swift in Sources */,
+				36C4F353257F0AF800C015C6 /* NetworkError.swift in Sources */,
 				36C4F32C257F018B00C015C6 /* AppDelegate.swift in Sources */,
 				36C4F32E257F018B00C015C6 /* SceneDelegate.swift in Sources */,
 			);
@@ -218,7 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36C4F343257F018E00C015C6 /* Sky_Mobile_TestTests.swift in Sources */,
+				36C4F356257F19AF00C015C6 /* NetworkManager_tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47SHVH7P47;
-				INFOPLIST_FILE = "Sky-Mobile-Test/Info.plist";
+				INFOPLIST_FILE = "Sky-Mobile-Test/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,7 +421,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47SHVH7P47;
-				INFOPLIST_FILE = "Sky-Mobile-Test/Info.plist";
+				INFOPLIST_FILE = "Sky-Mobile-Test/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -407,6 +438,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47SHVH7P47;
 				INFOPLIST_FILE = "Sky-Mobile-TestTests/Info.plist";
@@ -418,6 +450,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "None.Sky-Mobile-TestTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sky-Mobile-TestTests/Sky-Mobile-TestTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sky-Mobile-Test.app/Sky-Mobile-Test";
@@ -429,6 +463,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47SHVH7P47;
 				INFOPLIST_FILE = "Sky-Mobile-TestTests/Info.plist";
@@ -440,6 +475,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "None.Sky-Mobile-TestTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sky-Mobile-TestTests/Sky-Mobile-TestTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sky-Mobile-Test.app/Sky-Mobile-Test";
