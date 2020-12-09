@@ -16,7 +16,6 @@
 		36C4F34F257F099700C015C6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F34E257F099700C015C6 /* NetworkManager.swift */; };
 		36C4F351257F09F300C015C6 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F350257F09F300C015C6 /* EndPoints.swift */; };
 		36C4F353257F0AF800C015C6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F352257F0AF800C015C6 /* NetworkError.swift */; };
-		36C4F356257F19AF00C015C6 /* NetworkManager_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F355257F19AF00C015C6 /* NetworkManager_tests.swift */; };
 		36C4F35C257F2DB400C015C6 /* MoviesList.json in Resources */ = {isa = PBXBuildFile; fileRef = 36C4F35B257F2DB400C015C6 /* MoviesList.json */; };
 		36C4F35E257F2F6800C015C6 /* MovieItem_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F35D257F2F6800C015C6 /* MovieItem_tests.swift */; };
 		36C4F35F257F3B3D00C015C6 /* MovieItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F359257F294700C015C6 /* MovieItem.swift */; };
@@ -37,6 +36,8 @@
 		36C4F38C258187D200C015C6 /* UITexView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F38B258187D200C015C6 /* UITexView + Extensions.swift */; };
 		36C4F38E258188C600C015C6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C4F38D258188C600C015C6 /* Colors.xcassets */; };
 		36C4F3912581894200C015C6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F3902581894200C015C6 /* Colors.swift */; };
+		36C4F3932581946400C015C6 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F3922581946400C015C6 /* Alert.swift */; };
+		36C4F3982581984300C015C6 /* NetworkManager_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4F355257F19AF00C015C6 /* NetworkManager_tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		36C4F38B258187D200C015C6 /* UITexView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITexView + Extensions.swift"; sourceTree = "<group>"; };
 		36C4F38D258188C600C015C6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		36C4F3902581894200C015C6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		36C4F3922581946400C015C6 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				36C4F3822581548E00C015C6 /* Extensions */,
 				36C4F366257F3ECC00C015C6 /* Models */,
 				36C4F38F2581892900C015C6 /* Theme */,
+				36C4F3942581947500C015C6 /* Common */,
 			);
 			path = "Sky-Mobile-Test";
 			sourceTree = "<group>";
@@ -228,6 +231,14 @@
 				36C4F3902581894200C015C6 /* Colors.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		36C4F3942581947500C015C6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				36C4F3922581946400C015C6 /* Alert.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +364,7 @@
 				36C4F38C258187D200C015C6 /* UITexView + Extensions.swift in Sources */,
 				36C4F32C257F018B00C015C6 /* AppDelegate.swift in Sources */,
 				36C4F36D2580764C00C015C6 /* MovieItemCollectionViewCell.swift in Sources */,
+				36C4F3932581946400C015C6 /* Alert.swift in Sources */,
 				36C4F32E257F018B00C015C6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,9 +373,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36C4F3982581984300C015C6 /* NetworkManager_tests.swift in Sources */,
 				36C4F3782580E53700C015C6 /* MoviesListViewModel.swift in Sources */,
 				36C4F35F257F3B3D00C015C6 /* MovieItem.swift in Sources */,
-				36C4F356257F19AF00C015C6 /* NetworkManager_tests.swift in Sources */,
 				36C4F35E257F2F6800C015C6 /* MovieItem_tests.swift in Sources */,
 				36C4F37B2580ED3A00C015C6 /* MoviesListViewModel2_tests.swift in Sources */,
 			);

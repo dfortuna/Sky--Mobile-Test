@@ -33,7 +33,7 @@ class NetworkManager_tests: XCTestCase {
     }
     
     
-    func test_fetch_results_unknownError(){
+    func test_fetch_results_redirection(){
         
         //setup session
         let session = URLSessionMock()
@@ -49,7 +49,68 @@ class NetworkManager_tests: XCTestCase {
         session.response = response
         
         networkManager.fetchData(fromEndPoint: .home) { (result) in
-                                    XCTAssertEqual(result, Result.failure(.somethingWentWrong))
+            XCTAssertEqual(result, Result.failure(.redirection))
+        }
+    }
+    
+    
+    func test_fetch_results_not_found(){
+        
+        //setup session
+        let session = URLSessionMock()
+        let networkManager = NetworkManager(session: session)
+        
+        //setup test data
+        let data = Data()
+        session.data = data
+        
+        //setup response
+        let testURL = URL(string: "test")!
+        let response = HTTPURLResponse(url: testURL, statusCode: 400, httpVersion: nil, headerFields: nil)
+        session.response = response
+        
+        networkManager.fetchData(fromEndPoint: .home) { (result) in
+            XCTAssertEqual(result, Result.failure(.dataNotFound))
+        }
+    }
+    
+    func test_fetch_results_server_unavailable(){
+        
+        //setup session
+        let session = URLSessionMock()
+        let networkManager = NetworkManager(session: session)
+        
+        //setup test data
+        let data = Data()
+        session.data = data
+        
+        //setup response
+        let testURL = URL(string: "test")!
+        let response = HTTPURLResponse(url: testURL, statusCode: 500, httpVersion: nil, headerFields: nil)
+        session.response = response
+        
+        networkManager.fetchData(fromEndPoint: .home) { (result) in
+            XCTAssertEqual(result, Result.failure(.serverUnavailable))
+        }
+    }
+    
+    func test_fetch_results_unknown_error(){
+        
+        //setup session
+        let session = URLSessionMock()
+        let networkManager = NetworkManager(session: session)
+        
+        //setup test data
+        let data = Data()
+        session.data = data
+        
+        //setup response
+        let testURL = URL(string: "test")!
+        let response = HTTPURLResponse(url: testURL, statusCode: 600, httpVersion: nil, headerFields: nil)
+        session.response = response
+        
+        networkManager.fetchData(fromEndPoint: .home) { (result) in
+            XCTAssertEqual(result, Result.failure(.somethingWentWrong))
         }
     }
 

@@ -46,8 +46,8 @@ class MoviesListController: UIViewController {
             switch result {
             case .success(let moviesData):
                 self.decodeData(data: moviesData, toFormat: [MovieItem].self)
-            case .failure(_):
-                print()
+            case .failure(let error):
+                Alert.call(withMessage: error.description, andTitle: nil, onViewController: self)
             }
         }
     }

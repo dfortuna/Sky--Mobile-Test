@@ -28,10 +28,22 @@ class NetworkManager {
                 DispatchQueue.main.async {
                     switch httpResponse.statusCode {
                     case 200...299:
+                        //success:
                         callback(.success(data))
+                        
+                    case 300...499:
+                        //redirection messages(300...399) and client error(400...499)
+                        //data has been moved to another server or wrong request
+                        callback(.failure(.dataNotFound))
+                        
+                    case 500...599:
+                        //server issues
+                        callback(.failure(.serverUnavailable))
+                        
                     default:
+                        //something else went wrong
                         callback(.failure(.somethingWentWrong))
-                    }
+                    }   
                 }
             }
         }
