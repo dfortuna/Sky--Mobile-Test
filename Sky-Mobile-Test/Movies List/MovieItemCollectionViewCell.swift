@@ -17,7 +17,7 @@ class MovieItemCollectionViewCell: UICollectionViewCell {
     
     func formatUI(forMovieListViewModel movieData: MoviesListViewModel) {
         movieBannerImageView.layer.cornerRadius = 6
-        movieBannerImageView.backgroundColor = .lightGray
+        movieBannerImageView.load(urlString: movieData.cover_url) {_ in }
         movieTitle.text = movieData.title
     }
 }

@@ -66,6 +66,10 @@ extension MoviesListController: UICollectionViewDataSource {
 extension MoviesListController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let movie = movieItems[indexPath.row]
+        let detailVC = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
+        self.navigationController?.pushViewController(detailVC, animated: true)
+        detailVC.setup(forMovieItem: movie)
     }
 }
 
