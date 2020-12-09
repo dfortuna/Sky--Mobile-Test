@@ -26,8 +26,9 @@ class NetworkManager_tests: XCTestCase {
         let response = HTTPURLResponse(url: testURL, statusCode: 200, httpVersion: nil, headerFields: nil)
         session.response = response
         
-        networkManager.fetchData(fromEndPoint: .home) { result in
-                XCTAssertEqual(result, Result.success(data))
+        
+        networkManager.fetchData(fromEndPoint: .home) { (result) in
+                                    XCTAssertEqual(result, Result.success(data))
         }
     }
     
@@ -47,8 +48,8 @@ class NetworkManager_tests: XCTestCase {
         let response = HTTPURLResponse(url: testURL, statusCode: 300, httpVersion: nil, headerFields: nil)
         session.response = response
         
-        networkManager.fetchData(fromEndPoint: .home) { result in
-            XCTAssertEqual(result, Result.failure(.somethingWentWrong))
+        networkManager.fetchData(fromEndPoint: .home) { (result) in
+                                    XCTAssertEqual(result, Result.failure(.somethingWentWrong))
         }
     }
 
