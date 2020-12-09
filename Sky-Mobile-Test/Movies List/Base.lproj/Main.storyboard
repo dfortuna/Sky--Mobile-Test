@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MoviesListController" customModule="Sky_Mobile_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h6a-CV-gnC">
-                                <rect key="frame" x="0.0" y="128" width="414" height="734"/>
+                                <rect key="frame" x="10" y="40" width="394" height="734"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gBw-yq-oQJ">
                                     <size key="itemSize" width="193" height="299"/>
@@ -27,7 +27,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieItemCollectionViewCell" id="jZQ-za-gju" customClass="MovieItemCollectionViewCell" customModule="Sky_Mobile_Test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="193" height="299"/>
+                                        <rect key="frame" x="100.5" y="0.0" width="193" height="299"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Pva-ci-WvZ">
                                             <rect key="frame" x="0.0" y="0.0" width="193" height="299"/>
@@ -73,11 +73,11 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTV-CZ-F0s">
-                                <rect key="frame" x="12" y="88" width="394" height="40"/>
+                                <rect key="frame" x="12" y="0.0" width="394" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="0rI-6g-XOm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -86,8 +86,8 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dTV-CZ-F0s" secondAttribute="trailing" constant="8" id="5R2-fH-nck"/>
                             <constraint firstItem="dTV-CZ-F0s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="8Va-vB-7P3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h6a-CV-gnC" secondAttribute="trailing" id="CIE-b8-rAm"/>
-                            <constraint firstItem="h6a-CV-gnC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dCd-jD-8u7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h6a-CV-gnC" secondAttribute="trailing" constant="10" id="CIE-b8-rAm"/>
+                            <constraint firstItem="h6a-CV-gnC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dCd-jD-8u7"/>
                             <constraint firstItem="h6a-CV-gnC" firstAttribute="top" secondItem="dTV-CZ-F0s" secondAttribute="bottom" id="n8a-jH-hsK"/>
                             <constraint firstItem="dTV-CZ-F0s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uGT-Ju-A9h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h6a-CV-gnC" secondAttribute="bottom" id="yDO-Sn-nLX"/>
@@ -109,7 +109,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d2w-FW-Hv9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lbz-kN-6de">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Lbz-kN-6de">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

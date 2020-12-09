@@ -26,15 +26,33 @@ class InfoMovieItemTableViewCell: UITableViewCell {
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieDetails: UILabel!
     
-    func formatUI(infoData: MovieInfoViewModel) {
-        ageView.layer.cornerRadius = 5
-        ageView.backgroundColor = .red
-        ageLabel.textColor = .white
-        
+    fileprivate func formatTitle(_ infoData: MovieInfoViewModel) {
+        movieTitle.text = infoData.movieTitle
+        movieTitle.textColor = Colors.text.color
+    }
+    
+    fileprivate func formatDetail(_ infoData: MovieInfoViewModel) {
+        movieDetails.text = infoData.movieDetails
+        movieDetails.textColor = Colors.text.color
+    }
+    
+    fileprivate func formatAgeLabel() {
         // TODO: - Get Movie censorship
         ageLabel.text = "15"
-        
-        movieDetails.text = infoData.movieDetails
-        movieTitle.text = infoData.movieTitle
+        ageLabel.textColor = Colors.text.color
+        ageLabel.textColor = Colors.text.color
+    }
+    
+    fileprivate func formatAgeView() {
+        ageView.layer.cornerRadius = 5
+        ageView.backgroundColor = Colors.censorship.color
+    }
+    
+    func formatUI(infoData: MovieInfoViewModel) {
+        backgroundColor = Colors.background.color
+        formatAgeView()
+        formatAgeLabel()
+        formatDetail(infoData)
+        formatTitle(infoData)
     }
 }

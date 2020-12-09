@@ -16,15 +16,28 @@ class MoviesListController: UIViewController {
     @IBOutlet weak var moviesCollectionView: UICollectionView!
     @IBOutlet weak var GreetingsLabel: UILabel!
     
+    fileprivate func formatUI() {
+        formatNavigationController()
+        view.backgroundColor = Colors.background.color
+        GreetingsLabel.text = "Uma seleção de filmes imperdíveis:"
+        moviesCollectionView.backgroundColor = Colors.background.color
+        GreetingsLabel.textColor = Colors.text.color
+    }
+    
+    fileprivate func formatNavigationController() {
+        self.navigationController?.navigationBar.barTintColor = Colors.background.color
+        self.navigationController?.navigationBar.tintColor = Colors.text.color
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Colors.text.color]
+        title = "Cine SKY"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        formatUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        title = "Cine SKY"
-        GreetingsLabel.text = "Uma seleção de filmes imperdíveis:"
+        super.viewWillAppear(animated)
         fetchData()
     }
     

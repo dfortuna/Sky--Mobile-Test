@@ -14,15 +14,21 @@ class MovieDetailViewController: UIViewController {
     var movieItem: MovieItem?
     @IBOutlet weak var detailTableViewController: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    fileprivate func setupTableView() {
         detailTableViewController.dataSource = self
         detailTableViewController.delegate = self
         detailTableViewController.tableFooterView = UIView(frame: CGRect.zero)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupTableView()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        view.backgroundColor = Colors.background.color
+        detailTableViewController.backgroundColor = Colors.background.color
         detailTableViewController.reloadData()
     }
     

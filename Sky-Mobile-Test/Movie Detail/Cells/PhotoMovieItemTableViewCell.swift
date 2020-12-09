@@ -13,6 +13,7 @@ class PhotoMovieItemTableViewCell: UITableViewCell {
     @IBOutlet weak var movieBanner: UIImageView!
     
     func formatUI(forImage imageURL: String) {
+        movieBanner.backgroundColor = .lightGray
         movieBanner.load(urlString: imageURL) { _ in }
     }
 }
